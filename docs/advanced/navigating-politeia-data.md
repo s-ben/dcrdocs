@@ -4,11 +4,13 @@ Data from the [proposals.decred.org](https://proposals.decred.org/) site is stor
 
 For the purpose of this guide I will be using [this proposal](https://github.com/decred-proposals/mainnet/tree/master/c68bb790ba0843980bb9695de4628995e75e0d1f36c992951db49eca7b3b4bcd/) as an example. Links from [proposals.decred.org](https://proposals.decred.org/) will take you one layer deeper to the [most recent version of the proposal](https://github.com/decred-proposals/mainnet/tree/master/c68bb790ba0843980bb9695de4628995e75e0d1f36c992951db49eca7b3b4bcd/2). 
 
+Below is a screenshot of the root of the mainnet repository, where proposal data is stored.
+
 ![The root of the mainnet repository. * = proposal folders, A = anchoring data](/img/politeia/mainnet-pi-repo.png)
 
-The root of the mainnet repository. * = proposal folders, A = anchoring data.
+Folders marked with `*` contain data for individual proposals. Folders and files marked with `A` contain anchoring data.
 
-The folder and file marked A relate to the anchoring of Politeia data to the Decred blockchain through dcrtime. This guide will not describe those files in detail as they are not likely to be of interest for analysis. They are functional and facilitate Politeia's transparent censorship.
+The folder and file marked A in the screenshot above relate to the anchoring of Politeia data to the Decred blockchain through dcrtime. This guide will not describe those files in detail, as they are not likely to be of interest for analysis. They are functional and facilitate Politeia's transparent censorship.
 
 Within each proposal folder there are sequentially numbered sub-folders for each version of the proposal.
 
@@ -18,9 +20,9 @@ All relevant data for the proposal can be found within the version number folder
 
 ![Folder for version 2 of the example proposal](/img/politeia/prop-version2.png)
 
-**payload** folder contains an index.md file, which has the full text of the proposal and any images associated with the proposal
+The **payload** folder contains an index.md file, which has the full text of the proposal and any images associated with the proposal
 
-**plugins/decred** folder contains comments.journal (comments and up/down vote data) and, for proposals that have opened for voting, a ballot.journal file which contains ticket voting data
+The **plugins/decred** folder contains comments.journal (comments and up/down vote data) and, for proposals that have opened for voting, a ballot.journal file which contains ticket voting data
 
 **00.metadata.txt**: data about proposal submission. 
 
