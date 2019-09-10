@@ -1,9 +1,30 @@
-# Privacy
+# General information on Privacy
+
+## About transaction graphs
+
+It’s important to understand, that transactions are pseudonymous, but not anonymous. That means, a transaction graph can be built up, and there exists companies that are doing that work. If at some point one of our transaction is connected to our real world identity, it becomes easy to make assumptions based on that, for example that other transactions also belong to us, or that a specific unspent transaction belongs to us (that could give information about our balance).
 
 ## Trade-offs of reusing vs not reusing addresses
 
 For privacy, the best practice is to not reuse an address ever. A cryptocurrency address can be thought of as a cryptocurrency invoice instead. The term "address" does not mean, that it was designed to reuse it, like one would do with a bank account number for example. If someone would really care about privacy he or she would be using newly generated addresses even on a website.
-On the other hand, address reuse is preferred in situations when privacy is not important and we don't want to make the mistake of sending over large amount of funds to a wrong address. Reusing addresses is preferred when transparency is important.
+On the other hand, address reuse is preferred in situations when privacy is not important and we don't want to make the mistake of sending over large amount of funds to a wrong address. Reusing addresses is also preferred when transparency is important.
+For using a VSP, not using the same address is not possible yet. 
 
+## Change address
 
- 
+If we only spend fraction of an UTXO, a change output will be generated. This is not good for privacy. For example, the change UTXO will be merged with another unspent transaction output next time when we are spending money, thus creating a signal that both of the transactions belong to us. An average wallet software won’t give us information about this, we won’t know, for example, that 2 UTXOs were merged to create the transaction. If you care about privacy, you should exactly know which UTXOs are being spent.
+
+## Avoid identification when acquiring cryptocurrencies 
+
+Try to avoid getting cryptocurrencies from websites that require KYC or AML, or any other means of identification. Be aware that centralized exchanges can be hacked, thus providing the collected information to the hacker, who can belong to any kind of organization. It’s also possible that at some point an oppressive government will request the collected information. ATMs can be equipped with cameras, or there can be cameras nearby the ATM. This combined with the blockchain can reveal our identity. 
+
+## Hiding cryptocurrency usage itself
+
+Use VPN or Tor. Broadcast your transaction through a website, for example, [https://explorer.dcrdata.org/decodetx](https://explorer.dcrdata.org/decodetx)
+Don’t link your VPN or Tor usage with social networks, or with any other software or website that might identify you. Keep in mind that cookies exist. Use a browser profile that is dedicated to your crypto-related activities only. Quit all programs that you don’t need. Download some random data, so the size of your downloaded data won’t be exactly blockchain-sized. It’s a good idea to use virtual machines.
+
+## Platform-related questions
+
+Keep in mind that the platform you are using can also have vulnerabilities. A VPN does not provide any means of defense if the system itself that you are using is hacked. Try to use open-source software, and if possible, open-source hardware as well. See [General-Security](https://docs.decred.org/advanced/general-security/) for more information.
+
+Do keep in mind that nothing is bullet-proof! If you are a person in extreme danger, for example, because you live in a territory controlled by an oppressive regime, do more research on the topic. 
