@@ -12,7 +12,7 @@ For using a VSP, not using the same address is not possible yet.
 
 ## Change address
 
-If we only spend fraction of an UTXO, a change output will be generated. This is not good for privacy. For example, the change UTXO will be merged with another unspent transaction output next time when we are spending money, thus creating a signal that both of the transactions belong to us. An average wallet software won’t give us information about this, we won’t know, for example, that 2 UTXOs were merged to create the transaction. If you care about privacy, you should exactly know which UTXOs are being spent.
+If we only spend fraction of an [UTXO](https://coincentral.com/utxo-beginners-explainer/), a change output will be generated. This is not good for privacy. For example, the change UTXO will be merged with another unspent transaction output next time when we are spending money, thus creating a signal that both of the transactions belong to us. An average wallet software won’t give us information about this, we won’t know, for example, that 2 UTXOs were merged to create the transaction. If you care about privacy, you should exactly know which UTXOs are being spent.
 
 ## Avoid identification when acquiring cryptocurrencies 
 
