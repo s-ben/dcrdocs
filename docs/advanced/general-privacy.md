@@ -26,7 +26,8 @@ A lot of times this is something physical, for example leaving behind a printed 
 ## Centralized mixers
 
 The aim of a cryptocurrency mixer is to break the transaction graph. An old version of cryptocurrency mixers is the centralized mixers (also called scrambler, thumbler, shuffler). A user would send in Bitcoin or other cryptocurrency to a mixing service (that can be a website), and he or she will receive back coins that were mixed with the coins of the other users. They will charge a fee. The downside of this, is that the mixer could keep logs of the mixed coins. Other possibility is that the mixer will steal the coins. Using an online casino, poker site or exchange, that does not require identification, creates more or less the same result as using a mixer.
-Either we use a centralized mixer or the later mentioned solutions, address correlation is a problem. If we send in 1.435 BTC to a mixer, and someone receives 1.434 BTC that's a quite strong indication that the transaction belongs to us.
+Either we use a centralized mixer or the later mentioned solutions, amount correlation is a problem. If we send in 1.435 BTC to a mixer, and someone receives 1.434 BTC that's a quite strong indication that the transaction belongs to us.
+Amount correlation will be a problem even if we use a so called _black box privacy technique_, like sending in our money to an anonymous exchange, exchanging it to a privacy coin which uses zero-knowledge proof, and then switching back the money to our original currency. Amount correlation can still lead to loss of privacy. One can address this issue by breaking up the total balance to random chunks and distributing it to newly generated addresses, over a longer period of time.
 
 ## Non-custodial coin mixing
 
