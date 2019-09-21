@@ -2,7 +2,7 @@
 
 ## About transaction graphs
 
-It’s important to understand, that transactions are pseudonymous, but not anonymous. That means, a transaction graph can be built up, and there exists companies that are doing that work. If at some point one of our transaction is connected to our real world identity, it becomes easy to make assumptions based on that, for example that other transactions also belong to us, or that a specific unspent transaction belongs to us (that could give information about our balance).
+It’s important to understand, that transactions are pseudonymous, but not anonymous. That means, a transaction graph can be built up, and there exists companies that are doing that work. If at some point one of our transactions is connected to our real world identity, it becomes easy to make assumptions based on that, for example that other transactions also belong to us, or that a specific unspent transaction belongs to us (that could give information about our balance).
 
 ## Trade-offs of reusing vs not reusing addresses
 
@@ -12,11 +12,15 @@ For using a VSP, not using the same address is not possible yet.
 
 ## Change address
 
-If we only spend fraction of an [UTXO](https://coincentral.com/utxo-beginners-explainer/), a change output will be generated. This is not good for privacy. For example, the change UTXO will be merged with another unspent transaction output next time when we are spending money, thus creating a signal that both of the transactions belong to us. An average wallet software won’t give us information about this, we won’t know, for example, that 2 UTXOs were merged to create the transaction. If you care about privacy, you should exactly know which UTXOs are being spent.
+If we only spend fraction of an [UTXO](https://coincentral.com/utxo-beginners-explainer/), a change output will be generated. This is not good for privacy. For example, the change UTXO will be merged with another unspent transaction output next time when we are spending money, thus creating a signal that both of the transactions belong to us. An average wallet software won’t give us information about this, we won’t know, for example, that 2 UTXOs were merged to create the transaction. If you care about privacy, you should exactly know which UTXOs are being spent. [This](https://medium.com/@nopara73/coin-control-is-must-learn-if-you-care-about-your-privacy-in-bitcoin-33b9a5f224a2) is a good article on coin control.
 
 ## Avoid identification when acquiring cryptocurrencies 
 
 Try to avoid getting cryptocurrencies from websites that require KYC or AML, or any other means of identification. Be aware that centralized exchanges can be hacked, thus providing the collected information to the hacker, who can belong to any kind of organization. It’s also possible that at some point an oppressive government will request the collected information. ATMs can be equipped with cameras, or there can be cameras nearby the ATM. This combined with the blockchain can reveal our identity. 
+
+## Avoid leaving identifiers in public places
+
+A lot of times this is something physical, for example leaving behind a printed QR code somewhere, writing our nickname or real name on a piece of paper. Your name can be inprinted on the next page of the sticky notes stack, for example. Or that could also happen, that you leave behind your phone or computer unlocked for some minutes, with important information displayed on screen.
 
 ## Hiding cryptocurrency usage itself
 
