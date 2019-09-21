@@ -22,6 +22,17 @@ Try to avoid getting cryptocurrencies from websites that require KYC or AML, or 
 
 A lot of times this is something physical, for example leaving behind a printed QR code somewhere, writing our nickname or real name on a piece of paper. Your name can be inprinted on the next page of the sticky notes stack, for example. Or that could also happen, that you leave behind your phone or computer unlocked for some minutes, with important information displayed on screen.
 
+## Centralized mixers
+
+An old version of cryptocurrency mixers is the centralized mixers (also called scrambler, thumbler, shuffler). A user would send in Bitcoin or other cryptocurrency to a mixing service (that can be a website), and he or she will receive back coins that were mixed with the coins of the other users. They will charge a fee. The downside of this, is that the mixer could keep logs of the mixed coins. Other possibility is that the mixer will steal the coins. Using an online casino, poker site or exchange, that does not require identification, creates more or less the same result as using a mixer.
+Either we use a centralized mixer or the later mentioned solutions, address correlation is a problem. If we send in 1.435 BTC to a mixer, and someone receives 1.434 BTC that's a quite strong indication that the transaction belongs to us.
+
+## Non-custodial coin mixing
+
+It is possible to mix coins without a centralized exchange. One method is [CoinJoin](https://en.bitcoin.it/wiki/CoinJoin), which will combine multiple payments from multiple spenders into a single transaction.
+Other method is [CoinSwap](https://en.bitcoin.it/wiki/CoinSwap), which is using atomic swaps. A third method is [TumbleBit](https://en.bitcoin.it/wiki/TumbleBit), which allows parties to make payments through an untrusted Tumbler.
+
+
 ## Hiding cryptocurrency usage itself
 
 Use VPN or Tor. Broadcast your transaction through a website, for example, [https://explorer.dcrdata.org/decodetx](https://explorer.dcrdata.org/decodetx)
