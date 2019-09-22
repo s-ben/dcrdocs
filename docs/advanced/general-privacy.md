@@ -2,8 +2,13 @@
 
 ## About transaction graphs
 
-It’s important to understand, that transactions are pseudonymous, but not anonymous. That means, a transaction graph can be built up, and there exists companies that are doing that work. If at some point one of our transactions is connected to our real world identity, it becomes easy to make assumptions based on that, for example that other transactions also belong to us, or that a specific unspent transaction belongs to us (that could give information about our balance).
-One possible way to connect our IP address to one of our wallet address is checking the status of our transaction on a blockchain explorer, without the use of Tor.
+It’s important to understand, that transactions are pseudonymous, but not anonymous. That means, a transaction graph can be built up, and there exists companies that are doing that work. If at some point one of our transactions is connected to our real world identity, it becomes easy to make assumptions based on that, for example that other transactions also belong to us, or that a specific unspent transaction belongs to us (that could give information about our balance). 
+By  checking the status of our transaction on a blockchain explorer, our IP address can be connected to one of our wallet addresses, this could create a starting point for a transaction graph. A possible solution for this is to use blockchain explorer only over Tor.
+
+## Transaction broadcasting
+
+Broadcasting the transaction can reveal that the transaction you are broadcasting belongs to you. A solution for this is to broadcast your transaction through a website, over Tor. For example, [https://explorer.dcrdata.org/decodetx](https://explorer.dcrdata.org/decodetx)
+It's also important to note, that different wallets might use different [address types](address-details). This can also give a hint about your identity, which combined with other signals can ultimately reveal your identity.
 
 ## Trade-offs of reusing vs not reusing addresses
 
@@ -21,18 +26,19 @@ Try to avoid getting cryptocurrencies from websites that require KYC or AML, or 
 
 ## Avoid leaving identifiers in public places
 
-A lot of times this is something physical, for example leaving behind a printed QR code somewhere, writing our nickname or real name on a piece of paper. Your name can be inprinted on the next page of the sticky notes stack, for example. Or that could also happen, that you leave behind your phone or computer unlocked for some minutes, with important information displayed on screen.
+Many times this is something physical, for example leaving behind a printed QR code somewhere, writing our nickname or real name on a piece of paper. Your name can be inprinted on the next page of the sticky notes stack, for example. Or that could also happen, that you leave behind your phone or computer unlocked for some minutes, with important information displayed on screen.
 
 ## Centralized mixers
 
 The aim of a cryptocurrency mixer is to break the transaction graph. An old version of cryptocurrency mixers is the centralized mixers (also called scrambler, thumbler, shuffler). A user would send in Bitcoin or other cryptocurrency to a mixing service (that can be a website), and he or she will receive back coins that were mixed with the coins of the other users. They will charge a fee. The downside of this, is that the mixer could keep logs of the mixed coins. Other possibility is that the mixer will steal the coins. Using an online casino, poker site or exchange, that does not require identification, creates more or less the same result as using a mixer.
-Either we use a centralized mixer or the later mentioned solutions, amount correlation is a problem. If we send in 1.435 BTC to a mixer, and someone receives 1.434 BTC that's a quite strong indication that the transaction belongs to us.
-Amount correlation will be a problem even if we use a so called _black box privacy technique_, like sending in our money to an anonymous exchange, exchanging it to a privacy coin which uses zero-knowledge proof, and then switching back the money to our original currency. Amount correlation can still lead to loss of privacy. One can address this issue by breaking up the total balance to random chunks and distributing it to newly generated addresses, over a longer period of time.
+Either we use a centralized mixer or the later mentioned solutions, [amount correlation](https://en.bitcoin.it/wiki/Privacy#Amount) is a problem. If we send in 1.435 BTC to a mixer, and someone receives 1.434 BTC that's a quite strong indication that the transaction belongs to us.
+Amount correlation will be a problem even if we use a so called _black box privacy technique_, like sending in our money to an anonymous exchange, exchanging it to a privacy coin which uses [zero-knowledge proof](https://en.wikipedia.org/wiki/Zero-knowledge_proof), and then switching back the money to our original currency. Amount correlation can still lead to loss of privacy. One can address this issue by breaking up the total balance to random chunks and distributing it to newly generated addresses, over a longer period of time.
 
 ## Non-custodial coin mixing
 
 It is possible to mix coins without a centralized exchange. One method is [CoinJoin](https://en.bitcoin.it/wiki/CoinJoin), which will combine multiple payments from multiple spenders into a single transaction.
 Other method is [CoinSwap](https://en.bitcoin.it/wiki/CoinSwap), which is using atomic swaps. A third method is [TumbleBit](https://en.bitcoin.it/wiki/TumbleBit), which allows parties to make payments through an untrusted Tumbler.
+[Decred's build in coin mixing](https://blog.decred.org/2019/08/28/Iterating-Privacy/) feature is based on the CoinShuffle++ protocol.
 
 ## Using the Lightning Network for privacy
 
@@ -41,18 +47,17 @@ Privacy attacks like [common-input-ownership heuristic](https://en.bitcoin.it/wi
 
 ## Hiding cryptocurrency usage itself
 
-Use VPN or Tor. Broadcast your transaction through a website, for example, [https://explorer.dcrdata.org/decodetx](https://explorer.dcrdata.org/decodetx)
-Don’t link your VPN or Tor usage with social networks, or with any other software or website that might identify you. Keep in mind that cookies exist. Use a browser profile that is dedicated to your crypto-related activities only. Quit all programs that you don’t need. Download some random data, so the size of your downloaded data won’t be exactly blockchain-sized. It’s a good idea to use virtual machines.
+Use VPN or Tor. Don’t link your VPN or Tor usage with social networks, or with any other software or website that might identify you. Keep in mind that cookies exist. Use a browser profile that is dedicated to your crypto-related activities only. Quit all programs that you don’t need. Download some random data, so the size of your downloaded data won’t be exactly blockchain-sized. It’s a good idea to use virtual machines.
 
 ## Platform-related questions
 
-Keep in mind that the platform you are using can also have vulnerabilities. A VPN does not provide any means of defense if the system itself that you are using is hacked. Try to use open-source software, and if possible, open-source hardware as well. See [General-Security](https://docs.decred.org/advanced/general-security/) for more information.
+Keep in mind that the platform you are using can also have vulnerabilities. A VPN does not provide any means of defense if the system itself that you are using is hacked. Try to use open-source software, and if possible, open-source hardware as well. See [General-Security](general-security) for more information.
 
 Do keep in mind that nothing is bullet-proof! If you are a person in extreme danger, for example, because you live in a territory controlled by an oppressive regime, do more research on the topic. 
 
 ## More information
 
-[Coin Control](https://medium.com/@nopara73/coin-control-is-must-learn-if-you-care-about-your-privacy-in-bitcoin-33b9a5f224a2)
-[Merge Avoidance](https://medium.com/@octskyward/merge-avoidance-7f95a386692f)
-[Bitcoin Wiki - Privacy](https://en.bitcoin.it/wiki/Privacy#Bad_privacy_example_-_Exchange_front_running)
-[Bitcoin Transaction Graph Analysis (University paper)](https://arxiv.org/pdf/1502.01657.pdf)
+[Coin Control](https://medium.com/@nopara73/coin-control-is-must-learn-if-you-care-about-your-privacy-in-bitcoin-33b9a5f224a2)  
+[Merge Avoidance](https://medium.com/@octskyward/merge-avoidance-7f95a386692f)  
+[Bitcoin Wiki - Privacy](https://en.bitcoin.it/wiki/Privacy#Bad_privacy_example_-_Exchange_front_running)  
+[Bitcoin Transaction Graph Analysis (University paper)](https://arxiv.org/pdf/1502.01657.pdf)  
