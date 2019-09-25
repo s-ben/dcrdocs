@@ -42,7 +42,7 @@ Other method is [CoinSwap](https://en.bitcoin.it/wiki/CoinSwap), which is using 
 
 ## Using the Lightning Network for Privacy
 
-Privacy attacks like [common-input-ownership heuristic](https://en.bitcoin.it/wiki/Privacy#Common-input-ownership_heuristic), [address reuse](https://en.bitcoin.it/wiki/Privacy#Address_reuse) and change address detection fundamentally don’t work on any off-chain transactions technology. The Lightning Network is an off-chain transaction technology. One possible downside is that the operator of the lightning node could keep logs.
+Privacy attacks like [common-input-ownership heuristic](https://en.bitcoin.it/wiki/Privacy#Common-input-ownership_heuristic), [address reuse](https://en.bitcoin.it/wiki/Privacy#Address_reuse) and change address detection fundamentally don’t work on any off-chain transactions technology. The Lightning Network is an off-chain transaction technology. One possible downside is that the operator of a lightning node could keep logs of the pseudonymous identifiers, the balances, and the changes of the balances of the participants. This node could later sell this information to governments or corporations. A research paper called [BOLT](https://eprint.iacr.org/2016/701.pdf) proposes solutions for this problem.
 
 
 ## Hiding Cryptocurrency Usage Itself
