@@ -3,7 +3,7 @@
 ## About Transaction Graphs
 
 It’s important to understand, that transactions are pseudonymous, but not anonymous. That means, a transaction graph can be built up, and there exists companies that are doing that work. If at some point one of our transactions is connected to our real world identity, it becomes easy to make assumptions based on that, for example that other transactions also belong to us, or that a specific unspent transaction belongs to us (that could give information about our balance). 
-By  checking the status of our transaction on a blockchain explorer, our IP address can be connected to one of our wallet addresses, this could create a starting point for a transaction graph. A possible solution for this is to use blockchain explorer only over Tor.
+One possible way your personal identity could be linked to your blockchain activity is through the use of a block explorer. The administrator of the block explorer may be able to view your IP address and which addresses or transactions you are browsing, and they may infer that you own those addresses or transactions. A possible solution for this is to use blockchain explorers exclusively over Tor.
 
 ## Transaction Broadcasting
 
